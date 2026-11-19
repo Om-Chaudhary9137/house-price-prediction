@@ -27,17 +27,18 @@ Unlike standard notebooks that suffer from data leakage, this project enforces a
 
 | Model | 5-Fold CV RMSLE | Notes |
 | :--- | :---: | :--- |
-| Dummy Regressor (Baseline) | `0.3990` | Mean target benchmark |
-| Random Forest Regressor | `0.1385` | Default bagging baseline |
-| LightGBM Regressor | `0.1240` | Gradient boosted trees |
-| Ridge Regression (Tuned) | `0.1185` | Strong on high-dimensional OHE features |
-| XGBoost Regressor (Tuned) | `0.1170` | Optuna-tuned tree booster |
-| **Final Ensemble (Ridge + XGBoost)** | **`0.1135`** | **Best generalization (71.5% error drop vs baseline)** |
+| Dummy Regressor (Baseline) | `0.3963 (+/- 0.0273)` | Mean target benchmark |
+| Random Forest Regressor | `0.1353 (+/- 0.0132)` | Default bagging baseline |
+| LightGBM Regressor | `0.1261 (+/- 0.0114)` | Gradient boosted trees |
+| Ridge Regression (Tuned) | `0.1132 (+/- 0.0104)` | Strong on high-dimensional OHE features |
+| XGBoost Regressor (Tuned) | `0.1200 (+/- 0.0123)` | Optuna-tuned tree booster |
+| **Final Ensemble (Ridge + XGBoost)** | **`0.1091 (+/- 0.0113)`** | **Best generalization (72.5% error drop vs baseline)** |
 
 ### 🔒 Final Unseen Test Set Evaluation (Evaluated Once)
-* **Test RMSLE:** `~0.1150` *(Replace with your exact output)*
-* **Test R² Score:** `~0.915` *(Replace with your exact output)*
-* **Mean Absolute Percentage Error (MAPE):** `~8.2%`
+* **Test RMSLE:** `~0.1150` 
+* **Test R² Score:** `~0.922`
+* **Test MAE (in USD)** `$13,428.00`
+* **Mean Absolute Percentage Error (MAPE):** `~8.1%`
 
 ---
 
@@ -90,7 +91,7 @@ house-price-prediction/
    ```bash
    python -m src.data_prep
    python -m src.train
-   python -m src.evaluate
+   python -m src.evaluate_and_explain
    ```
 
 3. **Launch the Interactive Streamlit App**
