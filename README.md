@@ -73,6 +73,8 @@ house-price-prediction/
 ├── models/                   # Saved .joblib pipelines & evaluation charts
 ├── README.md
 ├──.gitignore
+├──.streamlit
+├──.venv
 └── requirements.txt
 ```
 
