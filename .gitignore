@@ -1,0 +1,16 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache & Build Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Environment Variables & Secrets
+.env
