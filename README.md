@@ -81,7 +81,7 @@ house-price-prediction/
 
 1. **Clone & Install Dependencies**
    ```bash
-   git clone https://github.com<your-username>/house-price-prediction.git
+   git clone https://github.com/Om-Chaudhary9137/house-price-prediction.git
    cd house-price-prediction
    pip install -r requirements.txt
    ```
